@@ -1,4 +1,4 @@
-import jax.numpy as jnp
+import jax.numpy as np
 from jax.scipy.stats import norm
 from jax import grad
 
