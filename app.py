@@ -24,10 +24,10 @@ app.layout = html.Div([
         clearable=False,
     ),
     dcc.Dropdown(
-        id="Algorithm",
+        id="algorithm",
         options=[{"label": x, "value": algorithmDict[x]} 
                  for x in algorithmDict],
-        value="tfs",
+        value="none",
         clearable=False,
     ),
     dcc.Graph(id="time-series-chart"),
@@ -35,9 +35,11 @@ app.layout = html.Div([
 
 @app.callback(
     Output("time-series-chart", "figure"), 
-    [Input("ticker", "value")])
-def display_time_series(ticker):
+    Input("ticker", "value"),
+    Input("algorithm", "value"))
+def display_time_series(ticker,algorithm):
     fig = px.line(df, x='date', y=ticker)
     return fig
+
 
 app.run_server(debug=True)
