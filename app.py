@@ -3,6 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
+#import algorithms.deltaNeutral
 from algorithms.TrendFollowing import prep_trend
 
 df = px.data.stocks()
