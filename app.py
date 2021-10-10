@@ -3,6 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
+import plotly.graph_objects as go
 #import algorithms.deltaNeutral
 from algorithms.TrendFollowing import prep_trend
 
@@ -44,11 +45,9 @@ def display_time_series(ticker,algorithm):
     if algorithm == "mms":
       pass
     elif algorithm == "tfs":
-      trend_days = [50, 200]
-      new_df = prep_trend(df, ticker, trend_days)
-      cols = [ticker] + [ticker + '_' + str(days) for days in trend_days]
-      fig = px.line(new_df, x='date', y=cols)
-      return fig
+      trend_days = [40, 160]
+            
+      return prep_trend(df, ticker, trend_days)
         
     fig = px.line(df, x='date', y=ticker)
     return fig
