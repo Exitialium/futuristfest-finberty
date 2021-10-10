@@ -1,0 +1,30 @@
+/* Arrow Styling */
+.content {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%); }
+  .content p {
+    margin: 0 0 20px; }
+
+/* Arrow & Hover Animation */
+#more-arrows {
+  width: 75px;
+  height: 65px; }
+  #more-arrows:hover polygon {
+    fill: #FFF;
+    transition: all .2s ease-out; }
+    #more-arrows:hover polygon.arrow-bottom {
+      transform: translateY(-18px); }
+    #more-arrows:hover polygon.arrow-top {
+      transform: translateY(18px); }
+
+polygon {
+  fill: #FFF;
+  transition: all .2s ease-out; }
+  polygon.arrow-middle {
+    opacity: 0.75; }
+  polygon.arrow-top {
+    opacity: 0.5; }
+
+/*# sourceMappingURL=output.css.map */
