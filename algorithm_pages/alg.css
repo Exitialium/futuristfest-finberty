@@ -2,6 +2,7 @@ body {
     background-color: #000000;
     color: white;
     height: 800px;
+    font-family: Roboto, sans-serif;
 }
 
 a {
@@ -15,8 +16,8 @@ a {
     z-index: 99;
     width: 1440px;
     height: 120px;
-    top: 0px;
-    left: 0px;
+    top: 0%;
+    left: 0%;
     background: #000000;
 }
 
@@ -26,11 +27,11 @@ a {
     height: 88px;
     left: 43px;
     top: 0px;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 54px;
-    line-height: 40px;
+    line-height: 120%;
     color: #FFFFFF;
     transition-delay: 0s;
     transition-duration: 0.3s;
