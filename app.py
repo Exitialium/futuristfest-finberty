@@ -4,6 +4,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import algorithms.deltaNeutral
+from TrendFollowing import prep_trend
 
 df = px.data.stocks()
 
@@ -41,6 +42,13 @@ app.layout = html.Div([
 def display_time_series(ticker,algorithm):
     ##Todo: Different algorithms triggers different methods
     if algorithm == "mms":
+      pass
+    elif algorithm == "tfs":
+      trend_days = [50, 200]
+      new_df = prep_trend(df, trend_days, ticker)
+      cols = [ticker] + [ticker + '_' + str(days) for days in trend_days]
+      fig = px.line(new_df, x='date', y=cols)
+      return fig
         
     fig = px.line(df, x='date', y=ticker)
     return fig
