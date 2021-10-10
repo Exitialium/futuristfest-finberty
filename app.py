@@ -3,6 +3,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
+import algorithms.deltaNeutral
 
 df = px.data.stocks()
 
@@ -38,6 +39,9 @@ app.layout = html.Div([
     Input("ticker", "value"),
     Input("algorithm", "value"))
 def display_time_series(ticker,algorithm):
+    ##Todo: Different algorithms triggers different methods
+    if algorithm == "mms":
+        
     fig = px.line(df, x='date', y=ticker)
     return fig
 
