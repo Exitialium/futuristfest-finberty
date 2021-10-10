@@ -4,6 +4,7 @@ html {
 
 body {
     background-color: #000000;
+    overflow-x: hidden;
 }
 
 #header {
@@ -34,7 +35,7 @@ video {
     position: absolute;
     left: 0px;
     width: 100%;
-    height: 512px;
+    height: 575px;
     top: 155px;
     object-fit: cover;
 }
@@ -42,7 +43,7 @@ video {
 #trapezoid1 {
     position: absolute;
     width: 100%;
-    height: 300px;
+    height: 330px;
     left: -2px;
     top: 400px;
     background: rgba(196, 196, 196, 0.6);
@@ -82,11 +83,93 @@ video {
     overflow: auto;
 }
 
-#algorithms {
+#alg_and_exp {
     /*background-color: aqua;*/
     position: relative;
+    width: 100%;
     height: 600px;
-    top: 700px;
+    left: -7px;
+    top: 750px;
     color: #FFFFFF;
-    margin: 15px;
+    margin-top: 0px;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+.alg {
+    margin-top: 50px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.alg:hover {
+    transform: scale(1.5) translate(17%, 0px);
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF
+    /* no underline */
+}
+
+.ex {
+    margin: 30px;
+    position: absolute;
+    float: right;
+    top: 100px;
+    right: -40%;
+    width: 50%;
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgba(196, 196, 196, 0.6);
+    border-radius: 10px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+#alg1:hover~#ex1 {
+    transform: translate(-50vw, 0px);
+    opacity: 1;
+}
+
+#alg2:hover~#ex2 {
+    transform: translate(-50vw, 0px);
+    opacity: 1;
+}
+
+#alg3:hover~#ex3 {
+    transform: translate(-50vw, 0px);
+    opacity: 1;
+}
+
+#alg4:hover~#ex4 {
+    transform: translate(-50vw, 0px);
+    opacity: 1;
+}
+
+#footer {
+    position: absolute;
+    width: 100%;
+    height: 240px;
+    left: -2px;
+    top: 1250px;
+    bottom: 0px;
+    background: rgba(196, 196, 196, 0.6);
+    text-align: center;
+    padding-top: 10%;
+    font-size: 30px;
+}
+
+#toTop {
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+#toTop:hover {
+    font-size: 36px;
 }
