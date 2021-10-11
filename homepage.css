@@ -167,7 +167,7 @@ video {
     transition-duration: 0.4s;
     color: #FFFFFF;
     text-decoration: none;
-    width: 30%;
+    width: 40%;
 }
 
 .alg:hover {
@@ -184,10 +184,9 @@ a {
     margin: 5%;
     position: absolute;
     float: right;
-    top: 4%;
     right: -60%;
     width: 50%;
-    height: 63%;
+    height: 74%;
     font-size: 20px;
     padding: 20px;
     background-color: rgba(196, 196, 196, 0.6);
@@ -197,6 +196,12 @@ a {
     color: #FFFFFF;
     opacity: 0;
     overflow: auto;
+}
+
+.source {
+    text-decoration: underline;
+    font-size: 16px;
+    color: #92a3db
 }
 
 #alg1:hover~#ex1 {
