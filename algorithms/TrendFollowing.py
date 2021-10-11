@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 
 import plotly.express as px
 import plotly.graph_objects as go
@@ -32,6 +33,10 @@ def prep_trend(df,  ticker, trend_days=[50, 200]):
 
 
     cols = [ticker] + [str(days)+" days Avg" for days in trend_days]
+
+    new_df['date'] = pd.to_datetime(new_df['date'])
+    new_df = new_df[((new_df['date'] >= pd.to_datetime('2018-01-01')) & (new_df['date'] <= pd.to_datetime('2019-12-30')))]
+    
 
     fig = px.line(new_df, x='date', y=cols)
 

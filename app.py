@@ -24,7 +24,6 @@ algorithmDict = {
 # }
 
 #dataFetcher = DataFetcher()
-print("hi")
 app.layout = html.Div([
     dcc.Dropdown(
         id="ticker",
@@ -45,7 +44,7 @@ app.layout = html.Div([
     dcc.Store(id='intermediate-value'),#dataFetcher.df),
     dcc.Interval(
             id='interval-component',
-            interval=13*1000, # in milliseconds
+            interval= 5*1000, # in milliseconds
             n_intervals=0
         )
 ])
@@ -54,10 +53,12 @@ app.layout = html.Div([
               Input('interval-component', 'n_intervals'),
               State('intermediate-value', 'data'))
 def update_dataframe(n, df):
-    print("Updated:",n)
+    #print("Updated:",n)
     df = df or FD.init().to_json()
     df = pd.read_json(df)
-    df = FD.update_data(n, df)
+    ddf, isGood = FD.update_data(n, df)
+    if isGood:
+      df = ddf
     return df.to_json()
 
 

@@ -15,7 +15,7 @@ def meanReversion(df, ticker):
     df['upper_bollinger'] = df['ma_20'] + (2 * df['std'])
     df['lower_bollinger'] = df['ma_20'] - (2 * df['std'])
     df = df[((df['date'] >= pd.to_datetime('2018-01-01')) & (df['date'] <= pd.to_datetime('2019-12-30')))]
-    df = df[((df['date'] >= '2018-01-01') & (df['date'] <= '2019-12-30'))]
+    #df = df[((df['date'] >= '2018-01-01') & (df['date'] <= '2019-12-30'))]
     
     fig = px.line(df, x='date', y=cols)
     fig.add_trace(go.Scatter(x=df.date, y = df.upper_bollinger,
