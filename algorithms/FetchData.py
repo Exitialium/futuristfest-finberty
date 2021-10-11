@@ -6,10 +6,11 @@ import requests
 
 
 def init(all_tickers=['GOOG','AAPL','AMZN','FB','NFLX','MSFT']):
-    print("kk")
+    #print("kk")
     goog, isGood = fetch('GOOG')
     if isGood:
         df = pd.DataFrame(goog['date'])
+        df['kk'] = pd.DataFrame([0]*753)
     else:
         df = pd.DataFrame([0]*753)
         df['date'] = pd.DataFrame([0]*753)
@@ -21,7 +22,7 @@ def init(all_tickers=['GOOG','AAPL','AMZN','FB','NFLX','MSFT']):
 
 
 def fetch(ticker):
-    print(ticker)
+    #print(ticker)
     r = requests.get(f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={ticker}&outputsize=full&apikey=EN1ZTODVRGORPNBW').json()
     try: 
         df = pd.DataFrame(r['Time Series (Daily)'], dtype=float).transpose()
@@ -59,19 +60,21 @@ def fetch(ticker):
 #     return ret
 
 def update_data(n, df):
-    updated_col = df.columns[(n % (len(df.columns)-2))+2]
+    updated_col = df.columns[(n % (len(df.columns)-3))+3]
     updated_col = exists_front(df) or updated_col
     fetched, isGood =fetch(updated_col)
     if isGood:
         df[updated_col] = list(fetched['close'])
         df['date'] = list(fetched['date'])
+        print("Fetch Succeeded:", updated_col)
+        return df, True
     else:
         print("Fetch Failed:", updated_col)
-    return df
+        return None, False
 
 
 def exists_front(df):
-    for i in range(2,len(df.columns)):
+    for i in range(3,len(df.columns)):
         col = df.columns[i]
         if df[col][0] == 0:
             return col
