@@ -45,7 +45,7 @@ def display_time_series(ticker,algorithm):
     if algorithm == "mms":
       pass
     elif algorithm == "tfs":
-      trend_days = [40, 160]
+      trend_days = [50, 200]
             
       return prep_trend(df, ticker, trend_days)
         

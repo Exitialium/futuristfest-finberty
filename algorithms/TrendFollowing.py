@@ -7,13 +7,14 @@ import plotly.graph_objects as go
 def prep_trend(df,  ticker, trend_days=[50, 200]):
     new_df = df.copy(deep=False)
     for days in trend_days:
+        weeks =  days // 7
         ret = []
         sum = 0
         for idx, val in enumerate(df[ticker]):
             sum += val
-            if idx >= days:
-                sum -= df[ticker][idx-days]
-            ret.append(sum/min(idx+1,days))
+            if idx >= weeks:
+                sum -= df[ticker][idx-weeks]
+            ret.append(sum/min(idx+1, weeks))
         new_df[str(days)+" days Avg"] = ret
     line1 = new_df[str(trend_days[0])+" days Avg"]
     line2 = new_df[str(trend_days[1])+" days Avg"]
