@@ -11,7 +11,7 @@ a {
     /* no underline */
 }
 
-#header {
+.header {
     position: relative;
     width: 100%;
     height: 25%;
@@ -19,7 +19,7 @@ a {
     order: 1;
 }
 
-#logo_name {
+.logo_name {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -27,7 +27,7 @@ a {
     row-gap: 100px;
 }
 
-#ilogo {
+.ilogo {
     position: absolute;
     width: auto;
     height: 50%;
@@ -36,7 +36,7 @@ a {
     transition-duration: 0.4s;
 }
 
-#logo {
+.logo {
     position: relative;
     width: 20%;
     height: 25%;
@@ -51,15 +51,15 @@ a {
     transition-duration: 0.3s;
 }
 
-#logo:hover {
+.logo:hover {
     font-size: 70px;
 }
 
-#logo:hover~#ilogo {
+.logo:hover~.ilogo {
     transform: scale(1.1);
 }
 
-#ilogo:hover~#logo {
+.ilogo:hover~.logo {
     font-size: 70px;
 }
 
