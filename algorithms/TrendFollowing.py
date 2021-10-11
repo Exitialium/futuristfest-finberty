@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 def prep_trend(df,  ticker, trend_days=[50, 200]):
     new_df = df.copy(deep=False)
     for days in trend_days:
-        weeks =  days // 7
+        weeks =  days
         ret = []
         sum = 0
         for idx, val in enumerate(df[ticker]):
