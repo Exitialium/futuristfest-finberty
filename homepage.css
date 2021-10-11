@@ -19,10 +19,28 @@
         order: 1;
     }
     
+    #logo_name {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        row-gap: 100px;
+    }
+    
+    #ilogo {
+        position: absolute;
+        width: auto;
+        height: 50%;
+        margin: 2%;
+        transition-delay: 0s;
+        transition-duration: 0.4s;
+    }
+    
     #logo {
         position: relative;
         width: 20%;
         height: 25%;
+        left: 100px;
         padding-left: 2%;
         font-family: Roboto, sans-serif;
         font-style: normal;
@@ -34,6 +52,14 @@
     }
     
     #logo:hover {
+        font-size: 70px;
+    }
+    
+    #logo:hover~#ilogo {
+        transform: scale(1.1);
+    }
+    
+    #ilogo:hover~#logo {
         font-size: 70px;
     }
     
