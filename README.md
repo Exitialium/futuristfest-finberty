@@ -1,3 +1,3 @@
 # futuristfest-finberty
 
-To try out the website, please open homepage.html
+To try out the website, please open index.html
