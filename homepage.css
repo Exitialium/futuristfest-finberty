@@ -1,245 +1,246 @@
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    body {
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-        margin: 0px;
-        background-color: #000000;
-        font-family: Roboto, sans-serif;
-    }
-    
-    #header {
-        position: relative;
-        width: 100%;
-        height: 25%;
-        background: #000000;
-        order: 1;
-    }
-    
-    #logo_name {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        row-gap: 100px;
-    }
-    
-    #ilogo {
-        position: absolute;
-        width: auto;
-        height: 50%;
-        margin: 2%;
-        transition-delay: 0s;
-        transition-duration: 0.4s;
-    }
-    
-    #logo {
-        position: relative;
-        width: 20%;
-        height: 25%;
-        left: 100px;
-        padding-left: 2%;
-        font-family: Roboto, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 64px;
-        color: #FFFFFF;
-        transition-delay: 0s;
-        transition-duration: 0.3s;
-    }
-    
-    #logo:hover {
-        font-size: 70px;
-    }
-    
-    #logo:hover~#ilogo {
-        transform: scale(1.1);
-    }
-    
-    #ilogo:hover~#logo {
-        font-size: 70px;
-    }
-    
-    #content {
-        display: flex;
-        flex-direction: column;
-        order: 2;
-    }
-    
-    #intro {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        height: 550px;
-        order: 1;
-    }
-    
-    .container {
-        position: relative;
-        left: 0px;
-        height: 100%;
-        overflow: hidden;
-    }
-    
-    video {
-        width: 1480px;
-        object-fit: cover;
-    }
-    
-    #whiteBand {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        height: 50%;
-        background: rgba(196, 196, 196, 0.6);
-    }
-    
-    #explore {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        left: 2%;
-        font-family: Roboto, sans-serif;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 54px;
-        color: #ffffff;
-        padding: 0%;
-        margin-right: 10%;
-    }
-    
-    #trapezoid2 {
-        position: relative;
-        width: 100%;
-        top: -50%;
-        border-bottom: 300px solid rgb(255, 255, 255);
-        border-left: 100px solid transparent;
-        border-right: 0px solid transparent;
-    }
-    
-    #text {
-        position: relative;
-        float: right;
-        width: 100%;
-        height: 250px;
-        top: 10px;
-        overflow: auto;
-        font-size: 2.5vw;
-    }
-    
-    #alg_and_exp {
-        /*background-color: aqua;*/
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        position: relative;
-        width: 100%;
-        color: #FFFFFF;
-        padding-left: 5%;
-        margin-bottom: 5%;
-        order: 2;
-    }
-    
-    .alg {
-        margin-top: 2.5%;
-        transition-delay: 0s;
-        transition-duration: 0.4s;
-        color: #FFFFFF;
-        text-decoration: none;
-        width: 30%;
-    }
-    
-    .alg:hover {
-        transform: scale(1.5) translate(17%, 0px);
-        text-decoration: underline;
-    }
-    
-    a {
-        text-decoration: none;
-        color: #FFFFFF
-        /* no underline */
-    }
-    
-    .ex {
-        margin: 5%;
-        position: absolute;
-        float: right;
-        top: 8%;
-        right: -60%;
-        width: 50%;
-        height: 63%;
-        font-size: 20px;
-        padding: 20px;
-        background-color: rgba(196, 196, 196, 0.6);
-        border-radius: 10px;
-        transition-delay: 0s;
-        transition-duration: 0.6s;
-        color: #FFFFFF;
-        opacity: 1;
-        overflow: auto;
-    }
-    
-    #alg1:hover~#ex1 {
-        transform: translate(-65vw, 0px);
-        opacity: 1;
-    }
-    
-    #alg2:hover~#ex2 {
-        transform: translate(-65vw, 0px);
-        opacity: 1;
-    }
-    
-    #alg3:hover~#ex3 {
-        transform: translate(-65vw, 0px);
-        opacity: 1;
-    }
-    
-    #alg4:hover~#ex4 {
-        transform: translate(-65vw, 0px);
-        opacity: 1;
-    }
-    
-    #ex1:hover {
-        opacity: 1;
-        transform: translate(-65vw, 0px);
-    }
-    
-    #ex2:hover {
-        opacity: 1;
-        transform: translate(-65vw, 0px);
-    }
-    
-    #ex3:hover {
-        opacity: 1;
-        transform: translate(-65vw, 0px);
-    }
-    
-    #ex4:hover {
-        opacity: 1;
-        transform: translate(-65vw, 0px);
-    }
-    
-    #footer {
-        position: relative;
-        width: 100%;
-        height: 100px;
-        background: rgba(196, 196, 196, 0.6);
-        text-align: center;
-        padding-top: 10%;
-        font-size: 30px;
-        order: 3;
-    }
-    
-    #toTop {
-        transition-delay: 0s;
-        transition-duration: 0.4s;
-    }
-    
-    #toTop:hover {
-        font-size: 36px;
-    }
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background-color: #000000;
+    font-family: Roboto, sans-serif;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    background: #000000;
+    order: 1;
+}
+
+#logo_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 100px;
+}
+
+#ilogo {
+    position: absolute;
+    width: auto;
+    height: 50%;
+    margin: 2%;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+#logo {
+    position: relative;
+    width: 20%;
+    height: 25%;
+    left: 100px;
+    padding-left: 2%;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    color: #FFFFFF;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+}
+
+#logo:hover {
+    font-size: 70px;
+}
+
+#logo:hover~#ilogo {
+    transform: scale(1.1);
+}
+
+#ilogo:hover~#logo {
+    font-size: 70px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 550px;
+    order: 1;
+}
+
+.container {
+    position: relative;
+    left: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    width: 1480px;
+    object-fit: cover;
+}
+
+#whiteBand {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 50%;
+    background: rgba(196, 196, 196, 0.6);
+}
+
+#explore {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    left: 2%;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    color: #ffffff;
+    padding: 0%;
+    margin-right: 10%;
+}
+
+#trapezoid2 {
+    position: relative;
+    width: 100%;
+    top: -50%;
+    border-bottom: 300px solid rgb(255, 255, 255);
+    border-left: 100px solid transparent;
+    border-right: 0px solid transparent;
+}
+
+#text {
+    position: relative;
+    float: right;
+    width: 100%;
+    height: 250px;
+    top: 10px;
+    overflow: auto;
+    font-size: 2.5vw;
+}
+
+#alg_and_exp {
+    /*background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    color: #FFFFFF;
+    padding-left: 5%;
+    margin-bottom: 5%;
+    order: 2;
+}
+
+.alg {
+    margin-top: 2.5%;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 30%;
+}
+
+.alg:hover {
+    transform: scale(1.5) translate(17%, 0px);
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF
+    /* no underline */
+}
+
+.ex {
+    margin: 5%;
+    position: absolute;
+    float: right;
+    top: 8%;
+    right: -60%;
+    width: 50%;
+    height: 63%;
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgba(196, 196, 196, 0.6);
+    border-radius: 10px;
+    transition-delay: 0s;
+    transition-duration: 0.6s;
+    color: #FFFFFF;
+    opacity: 0;
+    overflow: auto;
+}
+
+#alg1:hover~#ex1 {
+    transform: translate(-65vw, 0px);
+    opacity: 1;
+}
+
+#alg2:hover~#ex2 {
+    transform: translate(-65vw, 0px);
+    opacity: 1;
+}
+
+#alg3:hover~#ex3 {
+    transform: translate(-65vw, 0px);
+    opacity: 1;
+}
+
+#alg4:hover~#ex4 {
+    transform: translate(-65vw, 0px);
+    opacity: 1;
+}
+
+#ex1:hover {
+    opacity: 1;
+    transform: translate(-65vw, 0px);
+}
+
+#ex2:hover {
+    opacity: 1;
+    transform: translate(-65vw, 0px);
+}
+
+#ex3:hover {
+    opacity: 1;
+    transform: translate(-65vw, 0px);
+}
+
+#ex4:hover {
+    opacity: 1;
+    transform: translate(-65vw, 0px);
+}
+
+#footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: rgba(196, 196, 196, 0.6);
+    text-align: center;
+    padding-top: 10%;
+    font-size: 30px;
+    order: 3;
+}
+
+#toTop {
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+#toTop:hover {
+    font-size: 36px;
+}
