@@ -44,7 +44,7 @@ app.layout = html.Div([
 def display_time_series(ticker,algorithm):
     ##Todo: Different algorithms triggers different methods
     if algorithm == "mr":
-      return meanReversion(df, ticker)
+      return meanReversion(ticker)
     elif algorithm == "tfs":
       trend_days = [50, 200]
       return prep_trend(df, ticker, trend_days)
