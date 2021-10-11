@@ -172,7 +172,6 @@ video {
 
 .alg:hover {
     transform: scale(1.5) translate(17%, 0px);
-    text-decoration: underline;
 }
 
 a {
