@@ -112,6 +112,12 @@ video {
     color: #ffffff;
     padding: 0%;
     margin-right: 10%;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+#explore:hover {
+    font-size: 58px;
 }
 
 #trapezoid2 {
@@ -225,6 +231,20 @@ a {
     transform: translate(-65vw, 0px);
 }
 
+#try {
+    order: 3;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 2%;
+    font-size: 20px;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+#try:hover {
+    font-size: 28px;
+}
+
 #footer {
     position: relative;
     width: 100%;
@@ -233,7 +253,7 @@ a {
     text-align: center;
     padding-top: 10%;
     font-size: 30px;
-    order: 3;
+    order: 4;
 }
 
 #toTop {
