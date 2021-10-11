@@ -4,8 +4,9 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
-#import algorithms.deltaNeutral
+#from algorithms.deltaNeutral import EuropeanCall
 from algorithms.TrendFollowing import prep_trend
+from algorithms.meanReversion import meanReversion
 
 df = px.data.stocks()
 
@@ -13,7 +14,7 @@ app = dash.Dash(__name__)
 
 algorithmDict = {
   "Trend-following Strategies": "tfs",
-  "Arbitrage Opportunities": "ao",
+  "Mean Reversion": "mr",
   "Index Fund Rebalancing": "ifr",
   "Mathematical Model-based Strategies": "mms"
 }
@@ -42,11 +43,10 @@ app.layout = html.Div([
     Input("algorithm", "value"))
 def display_time_series(ticker,algorithm):
     ##Todo: Different algorithms triggers different methods
-    if algorithm == "mms":
-      pass
+    if algorithm == "mr":
+      return meanReversion(df, ticker)
     elif algorithm == "tfs":
       trend_days = [50, 200]
-            
       return prep_trend(df, ticker, trend_days)
         
     fig = px.line(df, x='date', y=ticker)
