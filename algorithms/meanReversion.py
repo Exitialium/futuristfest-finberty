@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import requests
 
 
-def meanReversion(odf,ticker):
+def meanReversion(ticker):
     r = requests.get(f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={ticker}&outputsize=full&apikey=EN1ZTODVRGORPNBW').json()
     df = pd.DataFrame(r['Time Series (Daily)'], dtype=float).transpose()
     df = df.reindex(index=df.index[::-1])
