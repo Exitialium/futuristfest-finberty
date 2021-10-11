@@ -182,11 +182,12 @@ a {
 
 .ex {
     margin: 5%;
+    margin-top: 2%;
     position: absolute;
     float: right;
     right: -60%;
     width: 50%;
-    height: 74%;
+    height: 72%;
     font-size: 20px;
     padding: 20px;
     background-color: rgba(196, 196, 196, 0.6);
