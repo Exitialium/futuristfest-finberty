@@ -64,10 +64,17 @@ a {
     font-size: 70px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    align-items: center;
+    height: 100%;
+}
+
 .alg-name {
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 20%;
     text-align: center;
 }
 
@@ -82,4 +89,8 @@ a {
     height: 600px;
     overflow: auto;
     border-radius: 15px;
+}
+
+iframe {
+    width: 90%;
 }
