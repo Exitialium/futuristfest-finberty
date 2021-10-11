@@ -148,12 +148,20 @@ video {
     width: 100%;
     color: #FFFFFF;
     padding-left: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     order: 2;
 }
 
+#instruction {
+    font-size: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    order: 2;
+    margin-bottom: none;
+}
+
 .alg {
-    margin-top: 2.5%;
+    margin-top: 2%;
     transition-delay: 0s;
     transition-duration: 0.4s;
     color: #FFFFFF;
@@ -176,7 +184,7 @@ a {
     margin: 5%;
     position: absolute;
     float: right;
-    top: 8%;
+    top: 4%;
     right: -60%;
     width: 50%;
     height: 63%;
