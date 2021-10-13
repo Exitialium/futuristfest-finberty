@@ -27,6 +27,7 @@ def fetch(ticker):
     try: 
         df = pd.DataFrame(r['Time Series (Daily)'], dtype=float).transpose()
     except:
+        #print(r.keys())
         return None, False
     df = df.reindex(index=df.index[::-1])
     df.reset_index(level=0, inplace=True)
